@@ -1,0 +1,146 @@
+<!--DOCTYPE HTML -->
+<html>
+<head>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css"/>
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" type="text/css"/>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!--script src="http://code.jquery.com/jquery-1.11.1.min.js"></script-->
+<!--script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+<style type="text/css">
+    #encabezado{
+        text-align: center;
+        text-size: 28px;
+        color:FFFFFF;
+        font-weight: bold;       
+    } 
+    #pie{
+        text-align: center;
+        text-size: 14px;
+        color:F85262;
+        font-weight: bold;       
+    }
+     #BckGnd{
+        background-color:F853F0;
+             
+    }
+    #Letra{
+        text-align: center;
+        text-size: 14px;
+        color:FFFFFF;
+             
+    }
+</style>
+<script type="text/javascript">
+
+$("document").ready(function Inicio(){
+    
+    $("#btnSumar").tap(function (){
+    // alert("alert");
+        var num=parseInt($("#txtNum1").val());
+        var num2=parseInt($("#txtNum2").val());
+        $("#txtRes").val(num+num2);
+    });
+    
+    $("#btnRestar").tap(function (){
+    // alert("alert");
+        var num=parseInt($("#txtNum3").val());
+        var num2=parseInt($("#txtNum4").val());
+        $("#txtResta").val(num-num2);
+    });
+    
+       $("#btnMultiplicar").tap(function (){
+    // alert("alert");
+        var num=parseInt($("#txtNum5").val());
+        var num2=parseInt($("#txtNum6").val());
+        $("#txtResult").val(num*num2);
+    });
+    
+          $("#btnDividir").tap(function (){
+    // alert("alert");
+        var num=parseFloat($("#txtNum7").val());
+        var num2=parseFloat($("#txtNum8").val());
+        $("#txtResdiv").val(num/num2);
+    });
+    
+    });
+    
+</script>
+</head>
+<body>
+    <div data-role="page" id="principal">
+	<div data-role="header">
+		<h1>App</h1>
+	</div>
+	<div id="BckGnd" data-role="content">
+		<p id="encabezado">Pantalla Principal</p>
+                <a href="#Asumar" data-role="button" data-transition="flow">Suma</a>
+                <a href="#Arestar" data-role="button" data-transition="flow">Resta</a>
+                <a href="#Amultiplicar" data-role="button" data-transition="flow">Multiplicación</a>
+                <a href="#Adividir" data-role="button" data-transition="flow">División</a>
+	</div>
+        <div data-role="footer">
+    </div>
+    </div>
+    <div data-role="page" id="Asumar">
+        <div data-role="header">
+		<h1>App</>
+	</div>
+	<div id="BckGnd" data-role="content">
+            <input type="text" value="" placeholder="Numero 1" id="txtNum1"/>
+            <input type="text" value="" placeholder="Numero 2" id="txtNum2"/>
+            <input type="text" value="" placeholder="Resutado" id="txtRes"/>
+            <input type="button" value="Sumar"  id="btnSumar"/>                
+	</div> 
+        <div data-role="footer">
+    </div>
+    </div>
+    
+        <div data-role="page" id="Arestar">
+        <div data-role="header">
+		<h1>App</>
+	</div>
+	<div id="BckGnd" data-role="content">
+            <input type="text" value="" placeholder="Numero 1" id="txtNum3"/>
+            <input type="text" value="" placeholder="Numero 2" id="txtNum4"/>
+            <input type="text" value="" placeholder="Resutado" id="txtResta"/>
+            <input type="button" value="Restar"  id="btnRestar"/>                
+	</div> 
+        <div data-role="footer">
+    </div>
+    </div>
+    
+        <div data-role="page" id="Amultiplicar">
+        <div data-role="header">
+		<h1>App</>
+	</div>
+	<div id="BckGnd" data-role="content">
+            <input type="text" value="" placeholder="Numero 1" id="txtNum5"/>
+            <input type="text" value="" placeholder="Numero 2" id="txtNum6"/>
+            <input type="text" value="" placeholder="Resutado" id="txtResult"/>
+            <input type="button" value="Multiplicar"  id="btnMultiplicar"/>                
+	</div> 
+        <div data-role="footer">
+    </div>
+    </div>
+    
+      <div data-role="page" id="Adividir">
+        <div data-role="header">
+		<h1>App</>
+	</div>
+	<div id="BckGnd" data-role="content">
+            <input type="text" value="" placeholder="Numero 1" id="txtNum7"/>
+            <input type="text" value="" placeholder="Numero 2" id="txtNum8"/>
+            <input type="text" value="" placeholder="Resutado" id="txtResdiv"/>
+            <input type="button" value="Dividir"  id="btnDividir"/>                
+	</div> 
+        <div data-role="footer">
+    </div>
+    </div>
+
+</body>
+</html>
